@@ -5,12 +5,25 @@
 }
 $colors: (#1a2a36, #2f4b60, #588cb5);
 
-.rec1 {
-  @include form(nth($colors, 1), 300px, 100px);
+@each $color in $colors {
+  $i: index($colors, $color);
+  .rec#{$i} {
+    @include form($color, 500px, 100px);
+  }
 }
-.rec2 {
-  @include form(nth($colors, 2), 100px, 50px);
-}
-.rec3 {
-  @include form(nth($colors, 3), 20px, 10px);
-}
+
+// @for $i from 1 through 6 {
+//   .rec#{$i} {
+//     @include form(nth($colors, 1), 500px, 100px);
+//   }
+// }
+
+//.rec1 {
+//  @include form(nth($colors, 1), 300px, 100px);
+//}
+//.rec2 {
+//  @include form(nth($colors, 2), 100px, 50px);
+//}
+//.rec3 {
+//  @include form(nth($colors, 3), 20px, 10px);
+//}
