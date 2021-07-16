@@ -1,0 +1,18 @@
+h1 {
+  color: $headerColor;
+  background-color: $headerBack;
+}
+
+.hi {
+  p {
+    color: $parafColor;
+    background-color: $parafBack;
+  }
+  span {
+    color: $spanColor;
+    background-color: $spanBack;
+  }
+  div p {
+    color: lightblue;
+  }
+}
